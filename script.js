@@ -2,6 +2,7 @@ let segundos = 0;
 let intervalo = null;
 
 const tempo = document.getElementById("tempo");
+const zerar = document.getElementById("zerar");
 const iniciar = document.getElementById("iniciar");
 const parar = document.getElementById("parar");
 
@@ -24,4 +25,11 @@ iniciar.addEventListener("click", function () {
 parar.addEventListener("click", function () {
     clearInterval(intervalo);
     intervalo = null;
+});
+
+zerar.addEventListener("click", function () {
+    clearInterval(intervalo);
+    intervalo = null;
+    segundos = 0;
+    tempo.textContent = "00:00";
 });
