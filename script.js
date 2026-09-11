@@ -7,10 +7,8 @@ const parar = document.getElementById("parar");
 
 function atualizarTempo() {
     segundos++;
-
     const minutos = Math.floor(segundos / 60);
     const segundosRestantes = segundos % 60;
-
     tempo.textContent =
         String(minutos).padStart(2, "0") +
         ":" +
